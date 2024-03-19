@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(44, 42, 42);
+  margin: auto;
+  font-size: 1.6rem;
+}
+
+.card {
+  margin: auto;
+  position: relative;
+  width: 90%;
+  height: 37rem;
+  background: #333;
+  transition: 0.5s;
+  max-width: 350px;
+}
+
+.card .linhas {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  overflow: hidden;
+}
+.card .linhas::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70rem;
+  height: 12rem;
+  background: linear-gradient(
+    transparent,
+    #517ec2,
+    #517ec2,
+    #517ec2,
+    transparent
+  );
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.card .linhas::after {
+  content: "";
+  position: absolute;
+  inset: 0.3rem;
+  background: #333;
+}
+
+.card .imgBx {
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: #000;
+  transition: 0.5s;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.card .imgBx::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50rem;
+  height: 15rem;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    transparent,
+    #d44d4d,
+    #d44d4d,
+    #d44d4d,
+    transparent
+  );
+  animation: animate2 6s linear infinite;
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.card .imgBx::after {
+  content: "";
+  position: absolute;
+  inset: 0.3rem;
+  background: #292929;
+}
+
+.card .imgBx img {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  transition: 0.5s;
+}
+
+.card .conteudo {
+  height: 100%;
+  position: relative;
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
+}
+
+.card .conteudo .detalhes {
+  padding-inline: 2rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 5rem;
+  height: 64%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.card .conteudo .detalhes h2 {
+  font-size: 20px;
+  color: #517ec2;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+.card .conteudo .detalhes h2 span {
+  font-size: 16px;
+
+  font-weight: 500;
+  color: #fff;
+}
+
+.card .conteudo .detalhes .data {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 10px;
+  text-align: justify;
+  line-height: 1.6rem;
+
+}
+
+.card .conteudo .detalhes .data h3 {
+
+  color: #45f3ff;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+
+.card .conteudo .detalhes .data h3 span {
+  font-size: 0.85em;
+  font-weight: 400;
+  color: #fff;
+}
+
+.card .conteudo .detalhes .botaoAcao {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 25%;
+}
+
+.card .conteudo .detalhes .botaoAcao button {
+  width: 40%;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  /* font-size: 0em; */
+  background: #517ec2;
+
+
+  display: block;
+  /* max-width: 20rem; */
+}
+
+.card .conteudo .detalhes .botaoAcao  a{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  text-decoration: none;
+  
+}
+
+.card .conteudo .detalhes .botaoAcao button:nth-child(2) {
+  background-color: #fff;
+}
+
+/*   Mobile L */
