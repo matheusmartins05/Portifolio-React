@@ -1,4 +1,4 @@
-export function CardProjeto({nome, imagem, descricao, techs}) {
+export function CardProjeto({nome, imagem, descricao, techs, github, link}) {
     return (
         <div class="p-16 bg-zinc-700 rounded-lg flex justify-between flex-col gap-10 w-[80%] md:w-[40%] hover:bg-slate-600 transition duration-200">
             <h3 className="text-blue-700 text-3xl self-center">{nome}</h3>
@@ -6,7 +6,7 @@ export function CardProjeto({nome, imagem, descricao, techs}) {
                 <img src={imagem} />
 
                 <div class="invisible group-hover:visible flex justify-center gap-4 relative left-1/2 top-[-40%] -translate-x-1/2 -translate-y-1/2">
-                    <a className="group/item bg-white rounded-[50%] w-24 h-24 flex justify-center items-center hover:bg-black cursor-pointer  transition " href="https://github.com/matheusmartins05/Doctor-Care" target="_blank" title="Repositório no Github">
+                    <a className="group/item bg-white rounded-[50%] w-24 h-24 flex justify-center items-center hover:bg-black cursor-pointer  transition " href={github} target="_blank" title="Repositório no Github">
                         <svg className="w-16 h-16"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -21,7 +21,7 @@ export function CardProjeto({nome, imagem, descricao, techs}) {
                             />
                         </svg>
                     </a>
-                    <a className="bg-white rounded-[50%] w-24 h-24 flex justify-center items-center hover:bg-black cursor-pointer group/item" href="https://matheusmartins05.github.io/Doctor-Care/" target="_blank" title="Ver Projeto">
+                    <a className="bg-white rounded-[50%] w-24 h-24 flex justify-center items-center hover:bg-black cursor-pointer group/item" href={link} target="_blank" title="Ver Projeto">
                         <svg
                             className="h-16 w-16"
                             xmlns="http://www.w3.org/2000/svg"
